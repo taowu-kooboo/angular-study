@@ -1,0 +1,8 @@
+<div>
+  <p>parent component! child message: {{ childMsg }}</p>
+  <wt-children (upper)="parentFun($event)" [msg]="'come from parent'">
+    <p style="color: purple" class="one">
+      populate ngContnet
+    </p>
+  </wt-children>
+</div>

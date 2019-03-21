@@ -1,0 +1,8 @@
+<div>
+  <h1>directive works</h1>
+  <p #greet wtHighlight [style.fontSize.px]="30">hello {{ name }}</p>
+  <p wtHighlight="green">{{ name }} is very good!</p>
+  <wt-children (upper)="appFun($event)">
+    <p class="ng-content">fill into ng-content</p>
+  </wt-children>
+</div>

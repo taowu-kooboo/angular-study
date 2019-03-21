@@ -1,0 +1,40 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!-- <div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+</div> -->
+<!-- <wt-observable></wt-observable>
+<wt-operator></wt-operator> -->
+
+<a [routerLink]="['/observable']" routerLinkActive="active">go to observable</a
+><br />
+<a [routerLink]="['/operator']">go to operator</a> <br />
+<a [routerLink]="['/template']">go to template</a><br />
+<a [routerLink]="['/children']">go to children</a><br />
+<a [routerLink]="['/parent']">go to parent</a><br />
+<a [routerLink]="['/directive']">go to direvctive</a><br />
+<a [routerLink]="['/bind']">go to bind</a><br />
+<a [routerLink]="['/life']">go to life</a><br />
+<a [routerLink]="['/lifeMain']">go to lifeMain</a><br />
+<a [routerLink]="['/htmlForm']">go to htmlForm</a><br />
+<a [routerLink]="['/templateForm']">go to templateForm</a><br />
+<a [routerLink]="['/reactiveForm']">go to reactiveForm</a><br />
+<a [routerLink]="['/reactiveRegistForm']">go to reactiveRegistForm</a><br />
+<a [routerLink]="['/http']">go to http</a><br />
+<!-- 在查询参数中传递数据 -->
+<!-- <a [routerLink]="['/product']" [queryParams]="{ id: 1 }">go to product</a><br /> -->
+<!-- 在路由路径中传递数据 -->
+<a [routerLink]="['/product', 1]">go to product</a><br />
+<a [routerLink]="[{ outlets: { primary: 'parent', aux: 'aux' } }]"
+  >let aux routerOutlet to show the aux component</a
+><br />
+<a [routerLink]="[{ outlets: { aux: null } }]"> hide the aux component</a><br />
+
+<input type="button" value="go to page product" (click)="toProduct()" /> <br />
+
+<router-outlet></router-outlet>
+<router-outlet name="aux"></router-outlet>
+
+<wt-life [name]="'Mirol'" [hidden]="true"></wt-life>

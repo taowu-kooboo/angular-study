@@ -1,0 +1,9 @@
+<p>
+  http works!
+</p>
+<!-- <ul>
+  <li *ngFor="let item of items">{{ item.title }}</li>
+</ul> -->
+<ul>
+  <li *ngFor="let item of items | async">{{ item.title }}</li>
+</ul>

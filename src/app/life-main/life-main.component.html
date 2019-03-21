@@ -1,0 +1,20 @@
+<p>
+  life-main works!
+</p>
+<div>问候语： <input type="text" [(ngModel)]="greeting" /></div>
+<div>姓名： <input type="text" [(ngModel)]="user.name" /></div>
+<wt-life-on-changes [greeting]="greeting" [user]="user"></wt-life-on-changes>
+
+<wt-life-on-changes
+  [greeting]="greeting"
+  [user]="user"
+  #childOne
+  [hidden]="true"
+></wt-life-on-changes>
+<wt-life-on-changes
+  [greeting]="greeting"
+  [user]="user"
+  #childTwo
+  [hidden]="true"
+></wt-life-on-changes>
+<button (click)="childTwo.sayHi('Hi Mirol')">Say Hi</button>

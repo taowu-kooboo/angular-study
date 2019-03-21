@@ -1,0 +1,28 @@
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm.value)" novalidate>
+  <div>
+    用户名：<input type="text" #username="ngModel" ngModel name="username" (input)="onUserInput" />
+  </div>
+  <div [hidden]="userValid || userUntouched">
+    <div [hidden]="myForm.form.hasError('required', 'username')">
+      必填
+    </div>
+  </div>
+  <div>
+    手机号：<input type="number" wtPhoneNumber ngModel name="phoneNumber" />
+  </div>
+  <div ngModelGroup="passwordsGroup">
+    <div>密码：<input type="password" ngModel name="password" /></div>
+    <div>确认密码：<input type="password" ngModel name="pwConfirm" /></div>
+  </div>
+  <button type="submit">注册</button>
+</form>
+
+<!-- <div>
+  {{ myForm.value | json }}
+</div>
+<div>
+  {{ username.value }}
+</div> -->
+
+<!-- <div ngForm></div>
+<form action="" ngNoForm></form>  angular不会接管表单 -->

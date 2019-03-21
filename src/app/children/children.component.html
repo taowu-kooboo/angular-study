@@ -1,0 +1,9 @@
+<div>
+  <p (click)="test()" style="cursor: pointer">
+    children works! <br />
+    (if you come from parent component you can click me to show the childMessage)
+    <br />
+    {{ parentMsg }}
+  </p>
+  <ng-content select=".one"></ng-content>
+</div>

@@ -1,0 +1,36 @@
+<p>
+  bind works!
+</p>
+<input type="text" value="Mirol" (input)="getInputValue($event)" /> <br />
+<img [src]="imgUrl" alt="" /> <br />
+<img src="{{ imgUrl }}" alt="" /> <br />
+<!-- DOM属性绑定 -->
+
+<!-- HTML属性绑定 -->
+<table>
+  <tr>
+    <td [attr.colspan]="size">HTML属性绑定</td>
+  </tr>
+</table>
+
+<input type="text" [attr.value]="message" />
+
+<p class="zero" [ngClass]="classObj" [class]="fontClass" [class.two]="isTrue">
+  test bind class
+</p>
+
+<p
+  [style.color]="isDev ? 'grey' : 'blue'"
+  [style.font-size.vmin]="isDev ? 3 : 4"
+  [ngStyle]="styleObj"
+>
+  test bind style
+</p>
+
+<!-- 双向绑定 -->
+
+<input type="text" [(ngModel)]="name" />{{ name }}
+
+<!-- 管道 -->
+<p>现在的时间是：{{ nowDate | date: 'yyyy-MM-dd HH:mm:ss' }}</p>
+<p>自己创建的管道：{{ size | multiple: '6' }}</p>
